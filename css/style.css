@@ -1,0 +1,321 @@
+.page {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+.page__content {
+    max-width: 1920px;
+    min-height: 320px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.menu {
+    width: 1720px;
+    min-width: 320px;
+    background-color: #D4D9DC;
+    height: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 0 100px;
+
+    z-index: 100;
+
+    position: fixed;
+}
+
+.menu__logo {}
+
+.menu__links {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu__link-box {
+    margin-left: 50px;
+}
+
+.menu__link-box:first-of-type {
+    margin-left: 0;
+}
+
+.menu__link {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+
+    text-decoration: none;
+    color: black;
+
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+
+.menu__link:hover {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+    font-size: 25px;
+}
+
+
+.main {
+    background: url(../images/background.jpg);
+    background-position: center;
+    width: 100%;
+    min-height: 680px;
+    background-attachment: fixed;
+}
+
+.main__bg {
+    width: 100%;
+    min-height: 680px;
+    background-color: rgba(0, 0, 0, .8);
+    padding-top: 300px;
+}
+
+.main__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 112px;
+
+    color: #FFFFFF;
+
+    margin: 0 0 0 100px;
+}
+
+.main__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+
+    color: #FFFFFF;
+    margin: 50px 0 0 100px;
+    width: 50%;
+}
+
+.main__offers {
+    margin: 35px 0 0 135px;
+}
+
+
+.main__offer {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+
+.about {
+    min-height: 1100px;
+    width: calc(100% - 200px);
+    padding: 0 100px;
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-areas: "about__title about__certificates"
+        "about__text about__certificates";
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: minmax(min-content, max-content);
+    grid-auto-rows: minmax(min-content, max-content);
+
+    -webkit-transition: visibility 1s ease-out;
+    -moz-transition: visibility 1s ease-out;
+    -o-transition: visibility 1s ease-out;
+    transition: visibility 1s ease-out;
+}
+
+.about__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 84px;
+    margin: 0;
+
+    grid-area: about__title;
+}
+
+.about__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: 45px;
+
+    text-align: justify;
+    margin-bottom: 0;
+
+    grid-area: about__text;
+
+    width: 85%;
+}
+
+.about__span {
+    margin-left: 1em;
+}
+
+.about__certificates {
+    margin: auto;
+    grid-area: about__certificates;
+    display: grid;
+    grid-column-gap: 4%;
+    grid-row-gap: 1%;
+    grid-template-columns: repeat(2, 48%);
+    grid-template-areas: "CRO AMC"
+        "Schnider AMC";
+}
+
+.about__certificate {
+    width: 100%;
+    cursor: pointer;
+    opacity: 1;
+
+    -webkit-transition: opacity .4s ease-out, box-shadow .4s ease-out;
+    -moz-transition: opacity .4s ease-out, box-shadow .4s ease-out;
+    -o-transition: opacity .4s ease-out, box-shadow .4s ease-out;
+    transition: opacity .4s ease-out, box-shadow .4s ease-out;
+}
+
+.about__certificate:hover {
+    width: 100%;
+    cursor: pointer;
+    opacity: .7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.about__certificate_type_CRO {
+    grid-area: CRO;
+    margin-bottom: 0;
+    margin-top: auto;
+}
+
+.about__certificate_type_Schnider {
+    grid-area: Schnider;
+}
+
+.about__certificate_type_AMC {
+    grid-area: AMC;
+    margin: auto;
+}
+
+.contacts {
+    min-height: 650px;
+    background-color: #D4D9DC;
+    padding: 115px 100px 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: minmax(min-content, max-content);
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-areas: "contacts__title contacts__map"
+                         "contacts__text contacts__map"
+                         "contacts__socials contacts__map";
+}
+
+.contacts__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 84px;
+
+    margin: 0;
+
+    grid-area: contacts__title;
+}
+
+.contacts__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+
+    margin: 100px 0 40px;
+
+    grid-area: contacts__text;
+}
+
+.contacts__bold {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.contacts__socials {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    grid-area: contacts__socials;
+}
+
+.contacts__social {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contacts__social:first-of-type {
+    margin-top: 0;
+}
+
+.social__text {
+    margin: 0;
+}
+
+.social__image {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.contacts__map {
+    width: 85%;
+    height: 500px;
+    border: none;
+
+    margin: auto auto;
+
+    grid-area: contacts__map;
+}
+
+.footer {
+    height: 50px;
+    width: calc(100% - 200px);
+    display: flex;
+    padding: 0 100px;
+    justify-content: flex-start;
+    background-color: #D4D9DC;
+}
+
+.footer__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 21px;
+    color: black;
+    text-decoration: none;
+    
+    -webkit-transition: opacity .5s ease-out, text-shadow .5s ease-out;
+    -moz-transition: opacity .5s ease-out, text-shadow .5s ease-out;
+    -o-transition: opacity .5s ease-out, text-shadow .5s ease-out;
+    transition: opacity .5s ease-out, text-shadow .5s ease-out;
+}
+
+.footer__link:hover {
+    opacity: .6;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
